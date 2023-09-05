@@ -6,9 +6,11 @@ import {AuthScreens} from '../utils/AuthScreens';
 
 const Stack = createNativeStackNavigator();
 
+// AuthNavigator is a component that handles the navigation for authentication screens.
 const AuthNavigator: React.FC = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      {/* This Stack.Screen represents the Login screen */}
       <Stack.Screen name={AuthScreens.Login} component={LoginScreen} />
     </Stack.Navigator>
   );
